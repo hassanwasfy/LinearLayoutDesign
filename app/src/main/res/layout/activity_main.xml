@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="360dp"
@@ -12,6 +10,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/MainHolder"
         android:layout_width="328dp"
         android:layout_height="117dp"
         android:layout_gravity="center"
@@ -19,6 +18,7 @@
         android:background="@drawable/card_background">
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/picDivider"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="12dp"
@@ -28,28 +28,33 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/imageCardView"
                 android:layout_width="93dp"
                 android:layout_height="93dp"
                 android:layout_marginEnd="8dp"
                 app:cardCornerRadius="8dp">
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imagePicture"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/image" />
             </androidx.cardview.widget.CardView>
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/dataHolder"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/leftSide"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Hassan Wasfy"
@@ -59,6 +64,7 @@
                         app:lineHeight="20.83dp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/job"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -68,6 +74,7 @@
                         app:fontFamily="@font/dm_sans" />
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/country"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -77,11 +84,13 @@
                         android:textSize="12sp" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/rateHolder"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/reviewsCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -90,6 +99,7 @@
                             android:textSize="12sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/rating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
@@ -101,37 +111,42 @@
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/rightSide"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/timeCalculated"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:text="3 hr"
                         android:background="@drawable/red_bg"
-                        android:paddingBottom="2dp"
-                        android:paddingTop="2dp"
                         android:paddingStart="4dp"
+                        android:paddingTop="2dp"
                         android:paddingEnd="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="3 hr"
                         android:textColor="#F5F5F5"
                         android:textSize="12sp"
                         app:fontFamily="@font/dm_sans"
                         app:lineHeight="20.83dp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/nationality"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="end"
                         android:layout_marginTop="8dp"
                         android:text="Russian"
-                        android:layout_gravity="end"
                         android:textColor="#DE122940"
                         android:textSize="12sp"
                         app:fontFamily="@font/dm_sans" />
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lastSeen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
@@ -139,9 +154,6 @@
                         android:text="5 Days ago"
                         android:textColor="#99263241"
                         android:textSize="12sp" />
-
-
-
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
